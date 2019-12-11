@@ -1,3 +1,6 @@
+//tu run this you need to make an http server so it can read all the files.
+//then goto localhost:8000 to see the page. everything else should work.
+
 let sketchRNN;
 let currentStroke;
 let x, y;
@@ -171,7 +174,6 @@ function draw() {
         websocket.send(JSON.stringify(command));
         robotPenDown = false;
       }
-
       command = {
         method: "goto",
         params: pixToInch(
